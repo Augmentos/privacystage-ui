@@ -17,7 +17,6 @@
   .legal ul, .legal ol { padding-left: 1.3rem; margin: 0 0 .9rem; }
   .legal a.inline { color: var(--link); text-decoration: underline; }
   .legal strong { color: var(--text); }
-  .legal .placeholder { background: rgba(191, 87, 0, .12); color: var(--warning); padding: .05em .35em; border-radius: 5px; font-size: .95em; }
 </style>
 </head>
 <body>
@@ -35,12 +34,12 @@
   <section class="container" style="padding-top:160px;">
     <div class="legal">
       <h1>Terms and Conditions</h1>
-      <p class="updated">Last updated: <span class="placeholder">[fill in date you publish this]</span></p>
+      <p class="updated">Last updated: <span id="lastUpdated"></span></p>
 
       <p>
         These Terms and Conditions ("Terms") govern your access to and use of PrivacyStage
         (the "Software"), a macOS application developed by
-        <span class="placeholder">[your legal name or business entity]</span> ("we", "us", "our").
+        Sharoon Babu ("we", "us", "our").
         By downloading, installing, purchasing, or otherwise using the Software, you agree to
         these Terms. If you don't agree, don't use the Software.
       </p>
@@ -95,8 +94,8 @@
       <h2>5. Refunds</h2>
       <p>
         If PrivacyStage doesn't work as described for your setup, contact us at
-        <a class="inline" href="mailto:support@privacystage.com">support@privacystage.com</a>
-        within <span class="placeholder">[confirm refund window, e.g. 14 days]</span> of
+        <a class="inline" href="mailto:theprivacystage@gmail.com">theprivacystage@gmail.com</a>
+        within <strong>14 days</strong> of
         purchase and we'll work with you to fix the issue or issue a refund through Paddle.
         Refunds are processed by Paddle back to your original payment method.
       </p>
@@ -144,8 +143,7 @@
 
       <h2>11. Governing Law</h2>
       <p>
-        These Terms are governed by the laws of
-        <span class="placeholder">[your jurisdiction, e.g. "the State of Delaware, USA" or "England and Wales"]</span>,
+        These Terms are governed by the laws of the State of New Jersey, USA,
         without regard to conflict-of-law principles. This section governs disputes about the
         Software and these Terms directly with us; disputes about a payment transaction itself
         are subject to Paddle's terms as the merchant of record.
@@ -154,7 +152,7 @@
       <h2>12. Contact</h2>
       <p>
         Questions about these Terms? Email
-        <a class="inline" href="mailto:support@privacystage.com">support@privacystage.com</a>.
+        <a class="inline" href="mailto:theprivacystage@gmail.com">theprivacystage@gmail.com</a>.
       </p>
     </div>
   </section>
@@ -169,6 +167,7 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 </script>
 </body>
 </html>

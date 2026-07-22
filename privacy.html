@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy | PrivacyStage</title>
+<meta name="description" content="How PrivacyStage collects, uses, and protects your data." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .legal { max-width: 760px; margin: 0 auto; padding-bottom: 6rem; }
+  .legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: .5rem; }
+  .legal .updated { color: var(--text-tertiary); font-size: .9rem; margin-bottom: 3rem; }
+  .legal h2 { font-size: 1.3rem; margin-top: 2.4rem; margin-bottom: .8rem; }
+  .legal p, .legal li { color: var(--text-secondary); line-height: 1.65; margin-bottom: .9rem; }
+  .legal ul, .legal ol { padding-left: 1.3rem; margin: 0 0 .9rem; }
+  .legal a.inline { color: var(--link); text-decoration: underline; }
+  .legal strong { color: var(--text); }
+  .legal table { width: 100%; border-collapse: collapse; margin: 0 0 1.4rem; }
+  .legal th, .legal td { text-align: left; padding: .6rem .8rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: .95rem; vertical-align: top; }
+  .legal th { color: var(--text); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a class="brand" href="index.html">
+    <img src="assets/privacystage-icon.png" alt="PrivacyStage icon" />
+    PrivacyStage
+  </a>
+  <div class="nav-links"></div>
+  <a href="index.html" class="btn btn-secondary">Back to site</a>
+</nav>
+
+<main>
+  <section class="container" style="padding-top:160px;">
+    <div class="legal">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: <span id="lastUpdated"></span></p>
+
+      <p>
+        PrivacyStage is built around a simple principle: your screen is yours. This policy
+        explains exactly what data exists as a result of using or buying PrivacyStage, why, and
+        where it lives. There's less here than in most software privacy policies, because the
+        app itself doesn't send your screen, your windows, or your usage anywhere.
+      </p>
+
+      <h2>1. What the app does locally (nothing leaves your Mac)</h2>
+      <p>
+        PrivacyStage requests macOS Screen Recording permission to capture the windows you
+        tag and render them onto a virtual display, which you then share yourself in a video
+        call. This capture and rendering happens entirely on your Mac. We do not receive,
+        store, or have any access to your screen contents, window contents, tags, or usage of
+        the app. There is no telemetry or analytics in the app or on this website.
+      </p>
+
+      <h2>2. What we do collect</h2>
+      <table>
+        <tr><th>Data</th><th>Why</th><th>Where it's stored</th></tr>
+        <tr>
+          <td>Your email and name</td>
+          <td>Embedded in your license key so it can be verified offline, and used to email
+            the key to you after purchase</td>
+          <td>In the license key itself (on your Mac); in our license-activation database
+            (Cloudflare Workers KV) for support lookups</td>
+        </tr>
+        <tr>
+          <td>A device identifier (your Mac's hardware UUID)</td>
+          <td>To enforce that a license activates on one Mac at a time</td>
+          <td>Cloudflare Workers KV, alongside the license record above</td>
+        </tr>
+        <tr>
+          <td>Payment details (card number, billing address, etc.)</td>
+          <td>To process your purchase</td>
+          <td>
+            Never touches our servers. Paddle.com Market Ltd, our payment processor and
+            merchant of record, collects and processes this directly — see
+            <a class="inline" href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener">Paddle's privacy policy</a>.
+          </td>
+        </tr>
+        <tr>
+          <td>Your email (for delivery only)</td>
+          <td>To send your license key after purchase</td>
+          <td>Passed to Resend, our transactional email provider, solely to deliver that one
+            email — see <a class="inline" href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend's privacy policy</a></td>
+        </tr>
+      </table>
+
+      <h2>3. What we don't do</h2>
+      <ul>
+        <li>No analytics, tracking pixels, or cookies on this website beyond what's strictly
+          needed to load the page (there currently are none)</li>
+        <li>No selling, renting, or sharing your data with advertisers</li>
+        <li>No account system — there's nothing to create, and nothing tied to an identity
+          beyond your license key</li>
+      </ul>
+
+      <h2>4. How long we keep it</h2>
+      <p>
+        License and device-activation records are kept for as long as your license is active,
+        so we can help if you need to move it to a new Mac or have a billing question. If you'd
+        like your record deleted, email us and we'll remove it — note this will deactivate your
+        license, since the app checks against that record to enforce the one-device limit.
+      </p>
+
+      <h2>5. Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights to access, correct, or delete your
+        personal data (for example, under GDPR if you're in the EU/UK, or CCPA if you're a
+        California resident). Contact us at the email below for any of these requests — since we
+        collect very little data to begin with, most requests are quick to fulfill.
+      </p>
+
+      <h2>6. Changes to this policy</h2>
+      <p>
+        If we make material changes to this policy, we'll update the "Last updated" date above.
+      </p>
+
+      <h2>7. Contact</h2>
+      <p>
+        Questions about this policy or your data? Email
+        <a class="inline" href="mailto:theprivacystage@gmail.com">theprivacystage@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-bottom" style="margin-top:0;padding-top:0;border-top:none;">
+    <span>© <span id="year">2026</span> PrivacyStage. All rights reserved.</span>
+    <a class="inline" href="index.html">Back to site</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+</script>
+</body>
+</html>
