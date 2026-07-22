@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You're all set | PrivacyStage</title>
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a class="brand" href="index.html">
+    <img src="assets/privacystage-icon.png" alt="PrivacyStage icon" />
+    PrivacyStage
+  </a>
+  <div class="nav-links"></div>
+  <a href="index.html" class="btn btn-secondary">Back to site</a>
+</nav>
+
+<main>
+  <section class="hero container" style="padding-top:160px;">
+    <span class="badge badge-accent reveal in" style="margin-bottom:1.4rem;">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Payment received
+    </span>
+    <h1 class="reveal in" style="font-size:clamp(2.2rem,5vw,3.2rem);">Thanks. You own PrivacyStage now.</h1>
+    <p class="lead reveal in" style="max-width:560px;margin:1.2rem auto 0;">
+      Your license key is on its way to the email you used at checkout; it usually lands within a minute or two.
+      Open PrivacyStage, click <strong>Enter License</strong>, and paste it in.
+    </p>
+
+    <div class="pricing-wrap reveal in" style="margin-top:2.5rem;">
+      <div class="price-card" style="text-align:left;">
+        <h3 style="margin-bottom:1rem;">While you wait</h3>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Haven't installed PrivacyStage yet? <a class="inline" href="#" id="dlFromSuccess">Download it here</a>.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Key not showing up after a few minutes? Check spam, then email <a class="inline" href="mailto:support@privacystage.com">support@privacystage.com</a> with your order ID.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Your key is checked right on your Mac: no account or login needed.</li>
+        </ul>
+        <a href="index.html#faq" class="btn btn-secondary" style="margin-top:.5rem;">Read the FAQ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-bottom" style="margin-top:0;padding-top:0;border-top:none;">
+    <span>© <span id="year">2026</span> PrivacyStage. All rights reserved.</span>
+    <a class="inline" href="mailto:support@privacystage.com" style="color:var(--link);">support@privacystage.com</a>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  var dl = document.getElementById("dlFromSuccess");
+  if (dl && window.PRIVACYSTAGE_CONFIG && window.PRIVACYSTAGE_CONFIG.downloadUrl) {
+    dl.setAttribute("href", window.PRIVACYSTAGE_CONFIG.downloadUrl);
+  }
+</script>
+</body>
+</html>

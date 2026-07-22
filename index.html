@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PrivacyStage: Share one window. Not your whole screen.</title>
+<meta name="description" content="PrivacyStage creates virtual monitors on macOS, tags the app windows you choose, and shares only those in Teams, Meet, or Zoom, and the view follows whichever tagged window you're using." />
+<meta property="og:title" content="PrivacyStage: Share one window. Not your whole screen." />
+<meta property="og:description" content="Virtual monitors for macOS. Share only the windows you tag; the view follows your active window." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#top">
+    <img src="assets/privacystage-icon.png" alt="PrivacyStage icon" />
+    PrivacyStage
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#pricing" class="btn btn-primary" data-scroll>Buy PrivacyStage</a>
+</nav>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero container">
+  <div class="badge-row reveal">
+    <span class="badge badge-dot">macOS 14+</span>
+    <span class="badge">Apple Silicon &amp; Intel</span>
+    <span class="badge">Direct download</span>
+  </div>
+  <h1 class="reveal d1">Share one window.<br />Not your whole <span class="accent-word">screen</span>.</h1>
+  <p class="lead reveal d2">PrivacyStage creates virtual monitors on your Mac, lets you tag just the app windows you choose, and shares only those in Teams, Meet, or Zoom, and the shared view <strong>follows whichever tagged window you're using</strong>.</p>
+  <div class="cta-row hero-cta reveal d3">
+    <a href="#pricing" class="btn btn-primary btn-lg" data-scroll>Start 3-day free trial</a>
+    <a href="#how" class="btn btn-secondary btn-lg" data-scroll>See how it works</a>
+  </div>
+  <p class="hero-sub reveal d3">Free for 3 days · one-time license · no subscription</p>
+
+  <!-- product stage -->
+  <div class="stage reveal">
+    <div class="stage-inner will-parallax" id="heroParallax">
+      <!-- control panel mock -->
+      <div class="window window-dark" aria-hidden="true">
+        <div class="window-bar">
+          <div class="traffic"><i class="r"></i><i class="y"></i><i class="g"></i></div>
+          <span class="window-title">PrivacyStage</span>
+          <span style="margin-left:auto;display:flex;gap:.5rem;align-items:center;">
+            <span class="badge badge-accent" style="font-size:.66rem;">Trial · 3 days left</span>
+          </span>
+        </div>
+        <div class="window-body">
+          <div class="monitor-list">
+            <div class="monitor-row">
+              <span class="mr-name"><span class="status-dot"></span><span class="mr-text"><strong style="color:var(--text-invert-secondary);">Design</strong><span>2 sources · 1920 × 1080</span></span></span>
+              <span class="toggle"></span>
+            </div>
+            <div class="monitor-row active">
+              <span class="mr-name"><span class="status-dot"></span><span class="mr-text"><strong>Development</strong><span>3 sources · 1920 × 1080</span></span></span>
+              <span class="toggle"></span>
+            </div>
+          </div>
+          <div class="tag-label">Share sources</div>
+          <div class="chips">
+            <span class="win-chip tagged"><span class="ico" style="background:#007acc;">&lt;/&gt;</span> Code</span>
+            <span class="win-chip tagged"><span class="ico" style="background:#0db7ed;">🐳</span> Docker Desktop</span>
+            <span class="win-chip app"><span class="ico" style="background:#a259ff;">$</span> iTerm2</span>
+            <span class="win-chip"><span class="ico" style="background:#4285f4;">G</span> Chrome</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- shared preview -->
+      <div class="share-preview">
+        <div class="screen">
+          <div class="screen-bar">
+            <span class="rec-dot"></span>
+            <span class="screen-title">Zoom · Sharing “Monitor 1”</span>
+          </div>
+          <div class="screen-stage">
+            <div class="app-frame active" style="background:linear-gradient(160deg,#2a2140,#1a1230);">
+              <div class="af-bar" style="background:#a259ff;">Figma · PrivacyStage Landing</div>
+              <div class="af-body" style="background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px);"></div>
+            </div>
+          </div>
+        </div>
+        <p class="hero-sub" style="text-align:center;">Only tagged windows appear. Your other windows stay private.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMPATIBILITY STRIP ============================ -->
+<section class="scene-surface" style="padding-block:clamp(40px,6vh,64px);">
+  <div class="container" style="text-align:center;">
+    <p class="eyebrow reveal">Works with the calls you already use</p>
+    <div class="badge-row reveal d1" style="gap:1.6rem;font-weight:600;color:var(--text-secondary);">
+      <span>Microsoft Teams</span><span>·</span><span>Google Meet</span><span>·</span><span>Zoom</span><span>·</span><span>anything that shares a screen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATEMENT / PROBLEM ============================ -->
+<section class="statement container">
+  <div class="section-head reveal">
+    <span class="eyebrow">The problem</span>
+    <h2 style="margin-inline:auto;">Screen sharing is all-or-nothing. PrivacyStage makes it selective.</h2>
+  </div>
+  <div class="split-compare">
+    <div class="compare-card bad reveal d1">
+      <span class="compare-tag">Sharing a whole display</span>
+      <h3 style="margin-top:.4rem;">Everything leaks</h3>
+      <ul>
+        <li>Notifications, DMs, and stray tabs are all visible.</li>
+        <li>Sharing a big monitor makes everything tiny on the other side.</li>
+        <li>You constantly rearrange windows before every call.</li>
+        <li>Switch apps and you're fumbling with “Share Screen” again.</li>
+      </ul>
+    </div>
+    <div class="compare-card good reveal d2">
+      <span class="compare-tag">Sharing a PrivacyStage monitor</span>
+      <h3 style="margin-top:.4rem;">Only what you tag</h3>
+      <ul>
+        <li>Just the windows you tagged are ever visible.</li>
+        <li>Rendered at a share-friendly resolution, never tiny.</li>
+        <li>Your real windows never move. PrivacyStage captures them.</li>
+        <li>The view follows your active window, no re-sharing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section id="how" class="scene-surface">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Live in four steps</h2>
+      <p class="lead" style="margin-top:1rem;">A virtual display comes online instantly. Tag what to show. Share it. Forget about it.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>New Virtual Monitor</h3>
+        <p>Click once and a hidden virtual display comes online instantly. Name it, pick 720p, 900p, or 1080p.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="step-num">2</div>
+        <h3>Tag your windows</h3>
+        <p>Click the windows to share, or tag a whole app so all its current and future windows come along.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-num">3</div>
+        <h3>Share in your call</h3>
+        <p>In Teams, Meet, or Zoom, choose Share Screen and pick the display named after your monitor.</p>
+      </div>
+      <div class="step reveal d3">
+        <div class="step-num">4</div>
+        <h3>It follows you</h3>
+        <p>Click into any tagged window and the shared monitor shows it, switching automatically as you work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SIGNATURE DEMO ============================ -->
+<section id="follows" class="container">
+  <div class="section-head reveal">
+    <span class="eyebrow">The signature move</span>
+    <h2>The shared view follows your active window</h2>
+    <p class="lead" style="margin-top:1rem;">Tag a few windows once. Whichever tagged window you click into becomes what everyone sees, instantly and hands-free.</p>
+  </div>
+
+  <div class="sig" id="sigDemo">
+    <div class="sig-controls">
+      <p class="tag-label" style="margin-bottom:.2rem;">Tagged windows · click into one on your Mac</p>
+      <button class="sig-chip" data-index="0" data-live="true">
+        <span class="ico" style="background:#a259ff;">F</span>
+        <span><span class="sig-name">Figma</span><br /><span class="sig-meta">Design file</span></span>
+        <span class="live-tag">On screen</span>
+      </button>
+      <button class="sig-chip" data-index="1">
+        <span class="ico" style="background:#007acc;">&lt;&gt;</span>
+        <span><span class="sig-name">VS Code</span><br /><span class="sig-meta">privacystage / UI.swift</span></span>
+        <span class="live-tag">On screen</span>
+      </button>
+      <button class="sig-chip" data-index="2">
+        <span class="ico" style="background:#0b8043;">▤</span>
+        <span><span class="sig-name">Keynote</span><br /><span class="sig-meta">Q3 Roadmap</span></span>
+        <span class="live-tag">On screen</span>
+      </button>
+    </div>
+
+    <div class="sig-screen">
+      <div class="screen">
+        <div class="screen-bar">
+          <span class="rec-dot"></span>
+          <span class="screen-title" id="sigScreenTitle">Google Meet · Sharing “Monitor 1”</span>
+        </div>
+        <div class="screen-stage" id="sigStage">
+          <div class="app-frame active" data-frame="0" style="background:linear-gradient(160deg,#2a2140,#1a1230);">
+            <div class="af-bar" style="background:#a259ff;">Figma · Design file</div>
+            <div class="af-body" style="background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 14px,transparent 14px 28px);"></div>
+          </div>
+          <div class="app-frame" data-frame="1" style="background:linear-gradient(160deg,#0d2233,#0a1722);">
+            <div class="af-bar" style="background:#007acc;">VS Code · UI.swift</div>
+            <div class="af-body" style="background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 3px,transparent 3px 22px);"></div>
+          </div>
+          <div class="app-frame" data-frame="2" style="background:linear-gradient(160deg,#10281c,#0a1a12);">
+            <div class="af-bar" style="background:#0b8043;">Keynote · Q3 Roadmap</div>
+            <div class="af-body" style="background:radial-gradient(circle at 30% 40%,rgba(255,255,255,.09),transparent 45%),radial-gradient(circle at 70% 70%,rgba(255,255,255,.06),transparent 40%);"></div>
+          </div>
+        </div>
+      </div>
+      <p class="hero-sub" style="text-align:center;">Live preview: the frame switches as the active tagged window changes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FEATURES BENTO ============================ -->
+<section id="features" class="scene-surface">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Everything in the box</span>
+      <h2>Built for people who share their screen all day</h2>
+    </div>
+    <div class="bento">
+      <div class="bento-card spotlight b-wide b-tall reveal">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+          <h3>Three layouts, one Layout picker</h3>
+          <p>Follow Active Window for a clean one-at-a-time share, Grid to tile every tagged window at once (up to nine, aspect-fit), or Primary + Thumbnails to keep one window big with the rest on deck.</p>
+        </div>
+        <div class="layout-pop" style="position:static;width:100%;box-shadow:none;margin-top:auto;" aria-hidden="true">
+          <div class="layout-opt sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/></svg>Follow Active Window</div>
+          <div class="layout-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Grid (all windows)</div>
+          <div class="layout-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/></svg>Primary + Thumbnails</div>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-2 reveal d1">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.4"/></svg></div>
+          <h3>App-level tagging</h3>
+          <p>Tag a whole app and every current and future window comes along automatically, shown as removable icon chips.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-2 reveal d2">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+          <h3>Follow-active-window</h3>
+          <p>The shared monitor tracks whichever tagged window is frontmost and hot-swaps the moment your focus changes.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-3 reveal d1">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+          <h3>Pick your resolution</h3>
+          <p>720p, 900p, or 1080p per monitor, always share-friendly, so your content never looks tiny on the other side.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-3 reveal d2">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></svg></div>
+          <h3>Per-monitor enable / disable</h3>
+          <p>Flip a monitor off between calls and keep its entire configuration (names, tags, resolution) ready for next time.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-2 reveal">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg></div>
+          <h3>Remembers everything</h3>
+          <p>Monitors, names, resolutions, layout, and both tag levels persist across launches.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-2 reveal d1">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+          <h3>Universal binary</h3>
+          <p>One download runs natively on both Apple Silicon and Intel Macs, with no separate versions to choose between.</p>
+        </div>
+      </div>
+
+      <div class="bento-card spotlight b-2 reveal d2">
+        <div class="b-body">
+          <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></div>
+          <h3>Lives in your menu bar</h3>
+          <p>Check what's live, add a source, or jump straight into a call, without ever opening the full window.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DEEP FEATURE ROWS ============================ -->
+<section class="container">
+  <div class="frow">
+    <div class="frow-copy reveal">
+      <span class="eyebrow">App tagging</span>
+      <h2>Tag once. Every window follows.</h2>
+      <p>Working in an app that spawns new windows all day: a browser, a design tool, a terminal? Tag the app itself. PrivacyStage covers all of its current and future windows, and per-window selection steps aside with a tidy “via app” badge.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Bundle-level tags always restore on relaunch</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Removable icon chips for every tagged app</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Mix app tags and single-window tags freely</li>
+      </ul>
+    </div>
+    <div class="frow-media reveal d1">
+      <div class="window window-dark" aria-hidden="true">
+        <div class="window-bar"><div class="traffic"><i class="r"></i><i class="y"></i><i class="g"></i></div><span class="window-title">Share sources</span></div>
+        <div class="window-body">
+          <div class="newmon" style="justify-content:flex-start;">▤ Tag a whole app ⌄</div>
+          <div class="tag-label">Tagged apps</div>
+          <div class="chips" style="margin-bottom:1rem;">
+            <span class="win-chip tagged"><span class="ico" style="background:#ff6a00;">◎</span> Browser ✕</span>
+            <span class="win-chip tagged"><span class="ico" style="background:#007acc;">&lt;/&gt;</span> Code ✕</span>
+          </div>
+          <div class="tag-label">Their windows</div>
+          <div class="chips">
+            <span class="win-chip app"><span class="ico" style="background:#ff6a00;">◎</span> Docs · Spec</span>
+            <span class="win-chip app"><span class="ico" style="background:#ff6a00;">◎</span> Dashboard</span>
+            <span class="win-chip app"><span class="ico" style="background:#007acc;">&lt;/&gt;</span> Capture.swift</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frow reverse">
+    <div class="frow-copy reveal">
+      <span class="eyebrow">Grid layout</span>
+      <h2>Show the whole picture at once</h2>
+      <p>Some sessions need one window; others need the full board. Switch to Grid and every tagged window appears together, each a live, independent capture stream, tiled and aspect-fit into an auto-sized layout up to nine tiles.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> One live stream per window, all updating at once</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Auto-sized, aspect-fit tiles up to 9 windows</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Flip between Follow and Grid from the Layout picker</li>
+      </ul>
+    </div>
+    <div class="frow-media reveal d1">
+      <div class="screen" style="aspect-ratio:16/10;">
+        <div class="screen-bar"><span class="rec-dot"></span><span class="screen-title">Sharing “Monitor 1” · Grid</span></div>
+        <div style="height:calc(100% - 34px);padding:14px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;">
+          <div style="border-radius:8px;background:linear-gradient(160deg,#2a2140,#1a1230);border:1px solid rgba(255,255,255,.12);"></div>
+          <div style="border-radius:8px;background:linear-gradient(160deg,#0d2233,#0a1722);border:1px solid rgba(255,255,255,.12);"></div>
+          <div style="border-radius:8px;background:linear-gradient(160deg,#10281c,#0a1a12);border:1px solid rgba(255,255,255,.12);"></div>
+          <div style="border-radius:8px;background:linear-gradient(160deg,#2b2410,#191307);border:1px solid rgba(255,255,255,.12);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frow">
+    <div class="frow-copy reveal">
+      <span class="eyebrow">Menu bar</span>
+      <h2>Everything, one click away</h2>
+      <p>PrivacyStage lives in your menu bar so you never have to open the full window mid-call. See what's live, glance at what's on screen, add a source on the fly, or jump straight back in.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> See which monitor is live and what's on screen at a glance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Add a window to share without leaving your call</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Open the full app or quit, right from the menu bar</li>
+      </ul>
+    </div>
+    <div class="frow-media reveal d1">
+      <div class="menubar-mock" aria-hidden="true">
+        <div class="mb-header"><img src="assets/privacystage-icon.png" alt="" style="width:20px;height:20px;border-radius:5px;" /> PrivacyStage</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.3rem;">
+          <span style="display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--text-invert);"><span class="status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--success);display:inline-block;"></span>Design</span>
+          <span class="res-pill" style="background:rgba(255,255,255,.06);border-color:var(--border-dark);color:var(--text-invert-secondary);">1920 × 1080</span>
+        </div>
+        <div class="mb-section-label">On this monitor · 2</div>
+        <div class="mb-row on"><span class="mb-name"><span class="ico" style="background:#007acc;width:16px;height:16px;border-radius:4px;display:inline-grid;place-items:center;font-size:9px;">&lt;/&gt;</span>Code</span><span class="badge" style="font-size:.6rem;padding:.15rem .4rem;background:rgba(26,127,55,.18);color:#3dd56d;border-color:transparent;">On screen</span></div>
+        <div class="mb-row"><span class="mb-name"><span class="ico" style="background:#0db7ed;width:16px;height:16px;border-radius:4px;display:inline-grid;place-items:center;font-size:9px;">🐳</span>Docker Desktop</span></div>
+        <div class="mb-section-label">Available · 8</div>
+        <div class="mb-row"><span class="mb-name"><span class="ico" style="background:#4285f4;width:16px;height:16px;border-radius:4px;display:inline-grid;place-items:center;font-size:9px;">G</span>Chrome</span><span style="color:var(--link-dark);font-size:.8rem;">＋</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRIVACY / SECURITY ============================ -->
+<section id="privacy" class="scene-ink on-ink">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Private by design</span>
+      <h2>What isn't tagged is never seen</h2>
+      <p class="lead" style="margin-top:1rem;">PrivacyStage paints only your tagged windows onto a hidden virtual display. Everything else (your inbox, your DMs, that other monitor) simply isn't part of the stream.</p>
+    </div>
+    <div class="features" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="card reveal">
+        <div class="b-icon" style="background:rgba(255,255,255,.08);color:var(--link-dark);margin-bottom:1rem;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Only tagged windows leave your Mac</h3>
+        <p class="muted">Notifications, background apps, and untagged windows never enter the shared view.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="b-icon" style="background:rgba(255,255,255,.08);color:var(--link-dark);margin-bottom:1rem;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>No account required</h3>
+        <p class="muted">No sign-in, no dashboard, no password to manage. Paste your key once and PrivacyStage activates itself.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="b-icon" style="background:rgba(255,255,255,.08);color:var(--link-dark);margin-bottom:1rem;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></div>
+        <h3>Screen Recording, nothing more</h3>
+        <p class="muted">PrivacyStage asks only for macOS Screen Recording, the standard permission every capture app needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICING ============================ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>Try it free for 3 days. Then own it.</h2>
+      <p class="lead" style="margin-top:1rem;">Every feature is unlocked during the trial. When it ends, one payment gives you a license key. No subscription, ever.</p>
+    </div>
+    <div class="pricing-wrap reveal d1">
+      <div class="price-card">
+        <span class="badge badge-accent">One-time purchase</span>
+        <div class="price-amt" style="margin-top:1rem;"><sup>$</sup>9<span style="font-size:.5em;">.99</span></div>
+        <p class="price-cadence">pay once · yours for life</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Unlimited virtual monitors &amp; tagged windows</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Follow-active-window &amp; Grid layout</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> App- &amp; window-level tagging</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Universal binary · Apple Silicon &amp; Intel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free updates · license key delivered instantly</li>
+        </ul>
+        <button class="btn btn-primary btn-lg" id="buyBtn" data-price="__PADDLE_PRICE_ID__">Buy PrivacyStage · $9.99</button>
+        <p class="price-note">Secure checkout by Paddle. Your license key is emailed the moment payment clears. Paste it into PrivacyStage → Unlocked. Each license activates on one Mac.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:1.4rem;" class="muted reveal d2">
+      Haven't downloaded yet? <a class="btn-link" href="#" id="downloadLink">Download the free trial</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section id="faq" class="scene-surface">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Good to know</h2>
+    </div>
+    <div class="faq reveal d1">
+      <details open>
+        <summary>What exactly gets shared? <span class="plus"></span></summary>
+        <p class="faq-a">Only the windows you tag to a monitor. PrivacyStage captures those windows and paints the active one onto a hidden virtual display; you share that display in your call. Untagged windows, notifications, and background apps never appear.</p>
+      </details>
+      <details>
+        <summary>Will it move or resize my real windows? <span class="plus"></span></summary>
+        <p class="faq-a">No. Your windows stay exactly where they are. PrivacyStage only captures them. Nothing is moved, resized, or sent to another desktop.</p>
+      </details>
+      <details>
+        <summary>How does the free trial work? <span class="plus"></span></summary>
+        <p class="faq-a">You get 3 days with every feature unlocked. Trial start is stored in your Keychain, so it survives reinstalls. When it ends, enter a license key to keep going.</p>
+      </details>
+      <details>
+        <summary>How do I get my license key after paying? <span class="plus"></span></summary>
+        <p class="faq-a">Checkout is handled by Paddle. The moment payment clears, your license key is generated and emailed to you. Open PrivacyStage, paste the key, and you're unlocked. No account required.</p>
+      </details>
+      <details>
+        <summary>Which Macs are supported? <span class="plus"></span></summary>
+        <p class="faq-a">macOS 14 (Sonoma) or later, on both Apple Silicon and Intel. It's a single download that runs natively on either, with no separate versions and no security warnings.</p>
+      </details>
+      <details>
+        <summary>Which call apps does it work with? <span class="plus"></span></summary>
+        <p class="faq-a">Any app that can share a screen, including Microsoft Teams, Google Meet, and Zoom. In the call's Share Screen dialog, pick the display named after your PrivacyStage monitor.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="scene-ink on-ink final">
+  <div class="container">
+    <h2 class="reveal">Share smarter on your next call.</h2>
+    <p class="lead reveal d1">Download PrivacyStage, tag a window, and see the difference in your very next meeting.</p>
+    <div class="cta-row reveal d2" style="justify-content:center;">
+      <a href="#" class="btn btn-primary btn-lg" id="downloadLink2">Start 3-day free trial</a>
+      <a href="#pricing" class="btn btn-secondary btn-lg" data-scroll>See pricing</a>
+    </div>
+    <p class="hero-sub reveal d2" style="color:var(--text-invert-tertiary);">macOS 14+ · Apple Silicon &amp; Intel · one-time license</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/privacystage-icon.png" alt="PrivacyStage icon" /> PrivacyStage</div>
+        <p class="muted" style="font-size:.9rem;max-width:30ch;">Virtual monitors for macOS. Share only the windows you tag, and let the view follow you.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#follows">Follow-active-window</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:support@privacystage.com">Contact</a></li>
+          <li><a href="#pricing">Activate a license</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> PrivacyStage. All rights reserved.</span>
+      <span>Requires macOS 14+ · Not affiliated with Apple, Microsoft, Google, or Zoom.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
