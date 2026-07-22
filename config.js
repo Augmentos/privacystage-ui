@@ -2,20 +2,19 @@
    PrivacyStage: site configuration
    Edit these values. Nothing secret lives here (the Paddle client token is a
    PUBLISHABLE token, safe for the browser). Your Ed25519 PRIVATE key and the
-   key-minting webhook live on a server (see PADDLE_SETUP.md in the app repo, not
-   this one — never commit it here).
+   key-minting webhook live on a server; see PADDLE_SETUP.md.
    =========================================================================== */
 window.PRIVACYSTAGE_CONFIG = {
   paddle: {
     /* "sandbox" while testing, "production" when live. */
-    environment: "sandbox",
+    environment: "production",
 
     /* Paddle client-side token (starts with "test_" or "live_").
        Paddle dashboard → Developer tools → Authentication → Client-side tokens. */
-    token: "__PADDLE_CLIENT_TOKEN__",
+    token: "live_6806cbadd3ab9f42fa5d4c0c97d",
 
     /* The price you created in Paddle for PrivacyStage (starts with "pri_"). */
-    priceId: "__PADDLE_PRICE_ID__",
+    priceId: "pri_01ky471rqnh879xck8va58t2j3",
   },
 
   /* Where the "Download the free trial" buttons point (your notarized .dmg). */
