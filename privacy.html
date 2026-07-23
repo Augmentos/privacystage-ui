@@ -52,7 +52,7 @@
         tag and render them onto a virtual display, which you then share yourself in a video
         call. This capture and rendering happens entirely on your Mac. We do not receive,
         store, or have any access to your screen contents, window contents, tags, or usage of
-        the app. There is no telemetry or analytics in the app or on this website.
+        the app. There is no telemetry or analytics in the app itself.
       </p>
 
       <h2>2. What we do collect</h2>
@@ -89,8 +89,10 @@
 
       <h2>3. What we don't do</h2>
       <ul>
-        <li>No analytics, tracking pixels, or cookies on this website beyond what's strictly
-          needed to load the page (there currently are none)</li>
+        <li>No tracking pixels, no cookies, no cross-site tracking. This website uses
+          Cloudflare Web Analytics, which counts page views and visits without cookies and
+          without collecting anything that identifies you personally.</li>
+        <li>No analytics of any kind inside the app itself. The app never phones home.</li>
         <li>No selling, renting, or sharing your data with advertisers</li>
         <li>No account system — there's nothing to create, and nothing tied to an identity
           beyond your license key</li>
@@ -137,5 +139,6 @@
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 </script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e70c9f76a6994063aafa88637f11bb56"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
