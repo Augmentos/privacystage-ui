@@ -17,8 +17,11 @@ window.PRIVACYSTAGE_CONFIG = {
     priceId: "pri_01ky471rqnh879xck8va58t2j3",
   },
 
-  /* Where the "Download the free trial" buttons point (your notarized .dmg). */
-  downloadUrl: "https://github.com/Augmentos/privacystage-ui/releases/latest/download/PrivacyStage.dmg",
+  /* Where the "Download the free trial" buttons point. This goes through the
+     license Worker's /download route, which logs each hit (timestamp, country,
+     referrer) then 302-redirects to the latest notarized .dmg on GitHub. Query
+     download stats with: wrangler kv key list --binding LICENSES --prefix "dl:" */
+  downloadUrl: "https://privacystage-license.kalipsomatters.workers.dev/download",
 
   /* Optional: URL Paddle sends the buyer to after a successful payment.
      Leave as-is to use the bundled success page. */
