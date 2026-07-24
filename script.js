@@ -152,6 +152,34 @@
     });
   }
 
+  /* ---------- visit beacon: per-source, cookieless (first-party) ---------- */
+  (function () {
+    if (!cfg.downloadUrl) return;
+    let base;
+    try {
+      base = new URL(cfg.downloadUrl).origin;
+    } catch {
+      return;
+    }
+    const params = new URLSearchParams(location.search);
+    let src = params.get("utm_source") || "";
+    if (!src && document.referrer) {
+      try {
+        const rh = new URL(document.referrer).hostname.replace(/^www\./, "");
+        // Ignore internal navigation (privacy/terms -> home) so it doesn't self-attribute.
+        if (rh && rh !== location.hostname.replace(/^www\./, "")) src = rh;
+      } catch {}
+    }
+    const q = new URLSearchParams({ src: src || "direct" });
+    ["utm_source", "utm_medium", "utm_campaign"].forEach((k) => {
+      const v = params.get(k);
+      if (v) q.set(k, v);
+    });
+    try {
+      new Image().src = base + "/v?" + q.toString();
+    } catch {}
+  })();
+
   /* ---------- download links (carry UTM params through for attribution) ---------- */
   function downloadHref() {
     if (!cfg.downloadUrl) return null;

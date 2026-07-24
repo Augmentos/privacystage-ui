@@ -71,6 +71,13 @@
           <td>Cloudflare Workers KV, alongside the license record above</td>
         </tr>
         <tr>
+          <td>Aggregate visit and download counts (with approximate country and the
+            referring link/campaign, no cookies)</td>
+          <td>To understand which channels bring people to the site and how many download</td>
+          <td>Cloudflare Workers KV, as anonymous per-event records that auto-expire; nothing
+            ties them to you personally</td>
+        </tr>
+        <tr>
           <td>Payment details (card number, billing address, etc.)</td>
           <td>To process your purchase</td>
           <td>
@@ -89,9 +96,10 @@
 
       <h2>3. What we don't do</h2>
       <ul>
-        <li>No tracking pixels, no cookies, no cross-site tracking. This website uses
-          Cloudflare Web Analytics, which counts page views and visits without cookies and
-          without collecting anything that identifies you personally.</li>
+        <li>No cookies and no cross-site tracking. To understand how many people visit and
+          download, and which link referred them (for example a campaign tag), this website
+          uses Cloudflare Web Analytics plus our own first-party, cookieless counting. Neither
+          uses cookies or collects anything that identifies you personally.</li>
         <li>No analytics of any kind inside the app itself. The app never phones home.</li>
         <li>No selling, renting, or sharing your data with advertisers</li>
         <li>No account system — there's nothing to create, and nothing tied to an identity
