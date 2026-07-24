@@ -152,10 +152,25 @@
     });
   }
 
-  /* ---------- download links ---------- */
+  /* ---------- download links (carry UTM params through for attribution) ---------- */
+  function downloadHref() {
+    if (!cfg.downloadUrl) return null;
+    try {
+      const dest = new URL(cfg.downloadUrl);
+      const landing = new URLSearchParams(location.search);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
+        const v = landing.get(k);
+        if (v) dest.searchParams.set(k, v);
+      });
+      return dest.toString();
+    } catch {
+      return cfg.downloadUrl;
+    }
+  }
+  const dlHref = downloadHref();
   ["downloadLink", "downloadLink2"].forEach((id) => {
     const el = document.getElementById(id);
-    if (el && cfg.downloadUrl) el.setAttribute("href", cfg.downloadUrl);
+    if (el && dlHref) el.setAttribute("href", dlHref);
   });
 
   /* ---------- Paddle checkout ---------- */
